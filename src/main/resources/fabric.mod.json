@@ -16,6 +16,8 @@
 
   "environment": "*",
   "entrypoints": {
+    "client": [
+    ]
   },
   "mixins": [
     "translava.mixins.json"
