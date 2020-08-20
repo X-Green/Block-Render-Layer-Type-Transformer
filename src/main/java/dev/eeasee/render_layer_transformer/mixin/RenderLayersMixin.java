@@ -1,4 +1,4 @@
-package dev.eeasee.translava.mixin;
+package dev.eeasee.render_layer_transformer.mixin;
 
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.RenderLayers;

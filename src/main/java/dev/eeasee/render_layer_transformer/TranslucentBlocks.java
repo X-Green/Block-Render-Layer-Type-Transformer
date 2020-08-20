@@ -1,6 +1,6 @@
-package dev.eeasee.translava;
+package dev.eeasee.render_layer_transformer;
 
-import dev.eeasee.translava.listener.ReloadTranslucentBlockListListener;
+import dev.eeasee.render_layer_transformer.listener.ReloadTranslucentBlockListListener;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

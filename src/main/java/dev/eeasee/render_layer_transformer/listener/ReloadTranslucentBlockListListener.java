@@ -1,8 +1,8 @@
-package dev.eeasee.translava.listener;
+package dev.eeasee.render_layer_transformer.listener;
 
-import dev.eeasee.translava.TranslucentBlocks;
-import dev.eeasee.translava.data.Block2RenderLayer;
-import dev.eeasee.translava.data.RenderLayerData;
+import dev.eeasee.render_layer_transformer.TranslucentBlocks;
+import dev.eeasee.render_layer_transformer.data.Block2RenderLayer;
+import dev.eeasee.render_layer_transformer.data.RenderLayerData;
 import net.minecraft.block.Block;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.RenderLayer;

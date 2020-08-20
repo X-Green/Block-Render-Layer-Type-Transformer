@@ -1,7 +1,7 @@
-package dev.eeasee.translava.data;
+package dev.eeasee.render_layer_transformer.data;
 
 import com.google.common.collect.Maps;
-import dev.eeasee.translava.fakes.IRenderLayer;
+import dev.eeasee.render_layer_transformer.fakes.IRenderLayer;
 import net.minecraft.client.render.RenderLayer;
 
 import java.util.Map;

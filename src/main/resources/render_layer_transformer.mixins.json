@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "dev.eeasee.translava.mixin",
+  "package": "dev.eeasee.render_layer_transformer.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
   ],

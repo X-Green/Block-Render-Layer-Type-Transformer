@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "translucent-lava",
+  "id": "render-layer-trans",
   "version": "${version}",
 
-  "name": "Translucent Lava",
+  "name": "Render Layer Transformer",
   "description": "orz",
   "authors": [
     "eeasee"
@@ -20,7 +20,7 @@
     ]
   },
   "mixins": [
-    "translava.mixins.json"
+    "render_layer_transformer.mixins.json"
   ],
 
   "depends": {

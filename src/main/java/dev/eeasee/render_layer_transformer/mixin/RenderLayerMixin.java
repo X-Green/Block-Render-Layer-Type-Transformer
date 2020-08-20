@@ -1,6 +1,6 @@
-package dev.eeasee.translava.mixin;
+package dev.eeasee.render_layer_transformer.mixin;
 
-import dev.eeasee.translava.fakes.IRenderLayer;
+import dev.eeasee.render_layer_transformer.fakes.IRenderLayer;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.RenderPhase;
 import org.spongepowered.asm.mixin.Mixin;

@@ -1,4 +1,4 @@
-package dev.eeasee.translava.data;
+package dev.eeasee.render_layer_transformer.data;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.render.RenderLayer;
