@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "translucent-lava",
   "version": "${version}",
 
-  "name": "Transparent Lava",
+  "name": "Translucent Lava",
   "description": "orz",
   "authors": [
     "eeasee"
@@ -13,7 +13,6 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/translava/icon.png",
 
   "environment": "*",
   "entrypoints": {
@@ -23,11 +22,5 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.7.4",
-    "fabric": "*",
-    "minecraft": "1.16.x"
-  },
-  "suggests": {
-    "flamingo": "*"
   }
 }
