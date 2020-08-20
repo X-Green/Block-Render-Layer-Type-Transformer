@@ -1,4 +1,4 @@
-package dev.eeasee.translava.layers;
+package dev.eeasee.translava.data;
 
 import com.google.common.collect.Maps;
 import dev.eeasee.translava.fakes.IRenderLayer;
@@ -7,10 +7,10 @@ import net.minecraft.client.render.RenderLayer;
 import java.util.Map;
 
 public class RenderLayerData {
-    public final static Map<String, RenderLayer> renderLayerSet;
+    public final static Map<String, RenderLayer> renderLayerMap;
 
     static {
-        renderLayerSet = Maps.newHashMap();
+        renderLayerMap = Maps.newHashMap();
         for (RenderLayer renderLayer : new RenderLayer[]{
                 RenderLayer.getSolid(),
                 RenderLayer.getCutoutMipped(),
@@ -31,7 +31,15 @@ public class RenderLayerData {
                 RenderLayer.getTripwire()
         }
         ) {
-            renderLayerSet.put(((IRenderLayer) renderLayer).getRawName(), renderLayer);
+            renderLayerMap.put(((IRenderLayer) renderLayer).getRawName(), renderLayer);
         }
+    }
+
+    public static boolean containRenderLayerNameString(String s) {
+        return renderLayerMap.containsKey(s);
+    }
+
+    public static RenderLayer getRenderLayer(String s) {
+        return renderLayerMap.getOrDefault(s, null);
     }
 }

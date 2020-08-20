@@ -1,10 +1,8 @@
 package dev.eeasee.translava.mixin;
 
 import dev.eeasee.translava.TranslucentBlocks;
-import dev.eeasee.translava.layers.RenderLayerData;
+import dev.eeasee.translava.data.RenderLayerData;
 import dev.eeasee.translava.listener.ReloadTranslucentBlockListListener;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.RunArgs;
 import net.minecraft.util.registry.Registry;
@@ -21,7 +19,7 @@ public class MinecraftClientMixin {
         Registry.BLOCK.forEach((block -> {
             System.out.println(Registry.BLOCK.getId(block).toString());
         }));
-        RenderLayerData.renderLayerSet.forEach((s, renderLayer) -> {
+        RenderLayerData.renderLayerMap.forEach((s, renderLayer) -> {
             System.out.println(s);
         });
     }
