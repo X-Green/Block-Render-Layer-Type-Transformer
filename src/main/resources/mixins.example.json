@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.7.11",
+  "compatibilityLevel": "JAVA_8",
+  "target": "@env(DEFAULT)",
+  "package": "example.mixin",
+  "refmap": "mixins.example.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+    "MixinLoadingGui"
+  ],
+  "server": [
+  ]
+}

@@ -1,0 +1,11 @@
+{
+    "id": "example",
+    "name": "Example",
+    "authors": [
+        ""
+    ],
+    "listeners": [
+        "example.ExampleListener",
+        "example.ModInitializationListener"
+    ]
+}
