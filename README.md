@@ -1,9 +1,9 @@
-# Fabric Example Mod
+# Block render layer transformer
 
-## Setup
+## What for?
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+This mod allows you to modify the render layer type of blocks (or fluid) in your resource pack, 
+so that transparent textures can be used on non-transparent blocks, and so on.
 
-## License
+## How?
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.

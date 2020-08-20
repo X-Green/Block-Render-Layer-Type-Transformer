@@ -1,6 +1,6 @@
 package dev.eeasee.render_layer_transformer.listener;
 
-import dev.eeasee.render_layer_transformer.TranslucentBlocks;
+import dev.eeasee.render_layer_transformer.BlockRenderLayerTransformer;
 import dev.eeasee.render_layer_transformer.data.Block2RenderLayer;
 import dev.eeasee.render_layer_transformer.data.RenderLayerData;
 import net.minecraft.block.Block;
@@ -29,7 +29,7 @@ public class ReloadTranslucentBlockListListener implements SynchronousResourceRe
         Language language = Language.getInstance();
         Block2RenderLayer.clear();
         for (Block block : Registry.BLOCK) {
-            key = TranslucentBlocks.toLangKey(Registry.BLOCK.getId(block).toString());
+            key = BlockRenderLayerTransformer.toLangKey(Registry.BLOCK.getId(block).toString());
             if (!language.hasTranslation(key)) {
                 continue;
             }
@@ -39,7 +39,7 @@ public class ReloadTranslucentBlockListListener implements SynchronousResourceRe
             }
             RenderLayer renderLayer = RenderLayerData.getRenderLayer(renderLayerName);
             if (renderLayer == null) {
-                TranslucentBlocks.LOGGER.warn(String.format(
+                BlockRenderLayerTransformer.LOGGER.warn(String.format(
                         "[LayerRenderTypeTransformer] Wrong RenderLayer type name: [%s] at (%s)",
                         renderLayerName,
                         key

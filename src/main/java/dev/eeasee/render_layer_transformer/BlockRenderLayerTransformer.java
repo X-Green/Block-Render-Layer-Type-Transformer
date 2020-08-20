@@ -4,7 +4,7 @@ import dev.eeasee.render_layer_transformer.listener.ReloadTranslucentBlockListLi
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class TranslucentBlocks {
+public class BlockRenderLayerTransformer {
 
     public static final Logger LOGGER = LogManager.getLogger();
 
