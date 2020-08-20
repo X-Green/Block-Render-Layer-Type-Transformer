@@ -18,9 +18,9 @@ apply plugin: 'net.minecraftforge.gradle.tweaker-client'
 apply plugin: 'org.spongepowered.mixin'
 apply plugin: 'java'
 
-group 'dev.eeasee.translava'
-version '0.9.0'
-archivesBaseName = 'translava'
+group 'dev.eeasee.render-layer-transformer'
+version '0.1.0'
+archivesBaseName = 'render-layer-transformer'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8

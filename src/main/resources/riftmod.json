@@ -1,11 +1,9 @@
 {
-    "id": "example",
-    "name": "Example",
+    "id": "render-layer-transformer",
+    "name": "Render layer Transformer",
     "authors": [
-        ""
+        "eeasee"
     ],
     "listeners": [
-        "example.ExampleListener",
-        "example.ModInitializationListener"
     ]
 }
