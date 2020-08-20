@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(RenderLayers.class)
-public class RenderLayersMixin {
+public abstract class RenderLayersMixin {
     @Inject(method = "getFluidLayer", at = @At("HEAD"), cancellable = true)
     private static void translucentLava(FluidState state, CallbackInfoReturnable<RenderLayer> cir) {
         cir.setReturnValue(RenderLayer.getTranslucent());
