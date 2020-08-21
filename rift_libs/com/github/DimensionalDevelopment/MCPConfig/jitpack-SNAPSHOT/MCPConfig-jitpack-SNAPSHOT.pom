@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.github.DimensionalDevelopment</groupId>
+  <artifactId>MCPConfig</artifactId>
+  <version>jitpack-SNAPSHOT</version>
+  <packaging>zip</packaging>
+  <name>MCPConfig</name>
+  <description>Configuration files used for deobfuscating and modding Minecraft.</description>
+  <url>https://github.com/MinecraftForge/MCPConfig</url>
+  <licenses>
+    <license>
+      <name>All Rights Reserved, No redistribution.</name>
+      <url></url>
+    </license>
+  </licenses>
+  <scm>
+    <connection>scm:git:git://github.com/MinecraftForge/MCPConfig.git</connection>
+    <developerConnection>scm:git:git@github.com:MinecraftForge/MCPConfig.git</developerConnection>
+    <url>https://github.com/MinecraftForge/MCPConfig</url>
+  </scm>
+  <issueManagement>
+    <system>github</system>
+    <url>https://github.com/MinecraftForge/MCPConfig/issues</url>
+  </issueManagement>
+</project>
