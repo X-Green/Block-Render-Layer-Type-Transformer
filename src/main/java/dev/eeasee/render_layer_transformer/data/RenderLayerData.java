@@ -9,9 +9,10 @@ public class RenderLayerData {
     public final static Map<String, BlockRenderLayer> renderLayerMap = new HashMap<>();
 
     static {
-        for (BlockRenderLayer renderLayer : BlockRenderLayer.values()) {
-            renderLayerMap.put(renderLayer.toString().toLowerCase(), renderLayer);
-        }
+        renderLayerMap.put("solid", BlockRenderLayer.SOLID);
+        renderLayerMap.put("cutout_mipped", BlockRenderLayer.CUTOUT_MIPPED);
+        renderLayerMap.put("cutout", BlockRenderLayer.CUTOUT);
+        renderLayerMap.put("translucent", BlockRenderLayer.TRANSLUCENT);
     }
 
     public static boolean containRenderLayerNameString(String s) {
