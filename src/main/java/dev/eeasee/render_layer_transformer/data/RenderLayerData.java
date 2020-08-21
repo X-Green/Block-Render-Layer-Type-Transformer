@@ -1,37 +1,16 @@
 package dev.eeasee.render_layer_transformer.data;
 
-import com.google.common.collect.Maps;
-import dev.eeasee.render_layer_transformer.fakes.IRenderLayer;
-import net.minecraft.client.render.RenderLayer;
+import net.minecraft.util.BlockRenderLayer;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class RenderLayerData {
-    public final static Map<String, RenderLayer> renderLayerMap;
+    public final static Map<String, BlockRenderLayer> renderLayerMap = new HashMap<>();
 
     static {
-        renderLayerMap = Maps.newHashMap();
-        for (RenderLayer renderLayer : new RenderLayer[]{
-                RenderLayer.getSolid(),
-                RenderLayer.getCutoutMipped(),
-                RenderLayer.getCutout(),
-                RenderLayer.getTranslucent(),
-                RenderLayer.getTranslucentMovingBlock(),
-                RenderLayer.getTranslucentNoCrumbling(),
-                RenderLayer.getLeash(),
-                RenderLayer.getWaterMask(),
-                RenderLayer.getArmorGlint(),
-                RenderLayer.getArmorEntityGlint(),
-                RenderLayer.method_30676(),
-                RenderLayer.getGlint(),
-                RenderLayer.getGlintDirect(),
-                RenderLayer.getEntityGlint(),
-                RenderLayer.getEntityGlintDirect(),
-                RenderLayer.getLightning(),
-                RenderLayer.getTripwire()
-        }
-        ) {
-            renderLayerMap.put(((IRenderLayer) renderLayer).getRawName(), renderLayer);
+        for (BlockRenderLayer renderLayer : BlockRenderLayer.values()) {
+            renderLayerMap.put(renderLayer.toString(), renderLayer);
         }
     }
 
@@ -39,7 +18,7 @@ public class RenderLayerData {
         return renderLayerMap.containsKey(s);
     }
 
-    public static RenderLayer getRenderLayer(String s) {
+    public static BlockRenderLayer getRenderLayer(String s) {
         return renderLayerMap.getOrDefault(s, null);
     }
 }
