@@ -6,6 +6,7 @@ import dev.eeasee.render_layer_transformer.data.RenderLayerData;
 import net.minecraft.block.Block;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.fluid.Fluid;
 import net.minecraft.resource.ReloadableResourceManager;
 import net.minecraft.resource.ResourceManager;
 import net.minecraft.resource.SynchronousResourceReloadListener;
@@ -27,9 +28,10 @@ public class ReloadTranslucentBlockListListener implements SynchronousResourceRe
         String key;
         String renderLayerName;
         Language language = Language.getInstance();
-        Block2RenderLayer.clear();
+        Block2RenderLayer.BLOCK_TO_RENDER_LAYER_MAP.clear();
+        Block2RenderLayer.FLUID_TO_RENDER_LAYER_MAP.clear();
         for (Block block : Registry.BLOCK) {
-            key = BlockRenderLayerTransformer.toLangKey(Registry.BLOCK.getId(block).toString());
+            key = BlockRenderLayerTransformer.toLangKey("block", Registry.BLOCK.getId(block).toString());
             if (!language.hasTranslation(key)) {
                 continue;
             }
@@ -45,7 +47,27 @@ public class ReloadTranslucentBlockListListener implements SynchronousResourceRe
                         key
                 ));
             } else {
-                Block2RenderLayer.set(block, renderLayer);
+                Block2RenderLayer.BLOCK_TO_RENDER_LAYER_MAP.put(block, renderLayer);
+            }
+        }
+        for (Fluid fluid : Registry.FLUID) {
+            key = BlockRenderLayerTransformer.toLangKey("fluid", Registry.FLUID.getId(fluid).toString());
+            if (!language.hasTranslation(key)) {
+                continue;
+            }
+            renderLayerName = language.get(key);
+            if (!RenderLayerData.containRenderLayerNameString(renderLayerName)) {
+                continue;
+            }
+            RenderLayer renderLayer = RenderLayerData.getRenderLayer(renderLayerName);
+            if (renderLayer == null) {
+                BlockRenderLayerTransformer.LOGGER.warn(String.format(
+                        "[LayerRenderTypeTransformer] Wrong RenderLayer type name: [%s] at (%s)",
+                        renderLayerName,
+                        key
+                ));
+            } else {
+                Block2RenderLayer.FLUID_TO_RENDER_LAYER_MAP.put(fluid, renderLayer);
             }
         }
     }

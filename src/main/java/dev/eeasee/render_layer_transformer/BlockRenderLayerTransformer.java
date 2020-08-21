@@ -10,7 +10,7 @@ public class BlockRenderLayerTransformer {
 
     public static ReloadTranslucentBlockListListener reloadListener = null;
 
-    public static String toLangKey(String source) {
-        return "render_layer_transformer" + source;
+    public static String toLangKey(String head, String source) {
+        return String.format("render_layer_transformer.%s.%s", head, source);
     }
 }
