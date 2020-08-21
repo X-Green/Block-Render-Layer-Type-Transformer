@@ -19,7 +19,7 @@ apply plugin: 'org.spongepowered.mixin'
 apply plugin: 'java'
 
 group 'dev.eeasee.render-layer-transformer'
-version '0.1.0'
+version '1.0.0'
 archivesBaseName = 'render-layer-transformer'
 
 sourceCompatibility = 1.8
