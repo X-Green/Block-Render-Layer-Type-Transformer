@@ -1,0 +1,24 @@
+solid           // default layer render type, costing lowest
+
+cutout          // blocks like glass, costing medium
+
+cutout_mipped   // blocks like grass and so on, costing a bit more
+
+translucent     // blocks like stained glass, fluid like water, costing more
+
+// below are available in all versions.
+// for 1.15+, more types have been added.
+
+========1.15+========
+
+leash
+
+water_mask
+
+glint
+
+lightning
+
+========1.16+========
+
+tripwires
