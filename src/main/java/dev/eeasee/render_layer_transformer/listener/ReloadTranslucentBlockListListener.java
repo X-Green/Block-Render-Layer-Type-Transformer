@@ -6,6 +6,7 @@ import dev.eeasee.render_layer_transformer.data.RenderLayerData;
 import net.minecraft.block.Block;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.resource.language.I18n;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.resource.ReloadableResourceManager;
 import net.minecraft.resource.ResourceManager;
@@ -27,15 +28,14 @@ public class ReloadTranslucentBlockListListener implements SynchronousResourceRe
     private void updateCustomBlockRenderLayers() {
         String key;
         String renderLayerName;
-        Language language = Language.getInstance();
         Block2RenderLayer.BLOCK_TO_RENDER_LAYER_MAP.clear();
         Block2RenderLayer.FLUID_TO_RENDER_LAYER_MAP.clear();
         for (Block block : Registry.BLOCK) {
             key = BlockRenderLayerTransformer.toLangKey("block", Registry.BLOCK.getId(block).toString());
-            if (!language.hasTranslation(key)) {
+            if (!I18n.hasTranslation(key)) {
                 continue;
             }
-            renderLayerName = language.get(key);
+            renderLayerName = I18n.translate(key);
             if (!RenderLayerData.containRenderLayerNameString(renderLayerName)) {
                 continue;
             }
@@ -52,10 +52,10 @@ public class ReloadTranslucentBlockListListener implements SynchronousResourceRe
         }
         for (Fluid fluid : Registry.FLUID) {
             key = BlockRenderLayerTransformer.toLangKey("fluid", Registry.FLUID.getId(fluid).toString());
-            if (!language.hasTranslation(key)) {
+            if (!I18n.hasTranslation(key)) {
                 continue;
             }
-            renderLayerName = language.get(key);
+            renderLayerName = I18n.translate(key);
             if (!RenderLayerData.containRenderLayerNameString(renderLayerName)) {
                 continue;
             }

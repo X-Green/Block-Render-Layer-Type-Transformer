@@ -16,19 +16,12 @@ public class RenderLayerData {
                 RenderLayer.getCutoutMipped(),
                 RenderLayer.getCutout(),
                 RenderLayer.getTranslucent(),
-                RenderLayer.getTranslucentMovingBlock(),
                 RenderLayer.getTranslucentNoCrumbling(),
                 RenderLayer.getLeash(),
                 RenderLayer.getWaterMask(),
-                RenderLayer.getArmorGlint(),
-                RenderLayer.getArmorEntityGlint(),
-                RenderLayer.method_30676(),
                 RenderLayer.getGlint(),
-                RenderLayer.getGlintDirect(),
                 RenderLayer.getEntityGlint(),
-                RenderLayer.getEntityGlintDirect(),
-                RenderLayer.getLightning(),
-                RenderLayer.getTripwire()
+                RenderLayer.getLightning()
         }
         ) {
             renderLayerMap.put(((IRenderLayer) renderLayer).getRawName(), renderLayer);

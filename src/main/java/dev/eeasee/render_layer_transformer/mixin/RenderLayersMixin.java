@@ -26,19 +26,6 @@ public abstract class RenderLayersMixin {
         }
     }
 
-    @Inject(method = "getMovingBlockLayer", at = @At("HEAD"), cancellable = true)
-    private static void injectCustomMovingBlockRenderLayer(BlockState state, CallbackInfoReturnable<RenderLayer> cir) {
-        Block block = state.getBlock();
-        if (Block2RenderLayer.BLOCK_TO_RENDER_LAYER_MAP.containsKey(block)) {
-            RenderLayer layer = Block2RenderLayer.BLOCK_TO_RENDER_LAYER_MAP.get(block);
-            if (layer == RenderLayer.getTranslucent()) {
-                cir.setReturnValue(RenderLayer.getTranslucentMovingBlock());
-            } else {
-                cir.setReturnValue(layer);
-            }
-        }
-    }
-
     @Inject(method = "getFluidLayer", at = @At("HEAD"), cancellable = true)
     private static void injectCustomFluidRenderLayer(FluidState state, CallbackInfoReturnable<RenderLayer> cir) {
         Fluid fluid = state.getFluid();
