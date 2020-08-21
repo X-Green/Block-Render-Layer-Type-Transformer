@@ -10,7 +10,7 @@ public class RenderLayerData {
 
     static {
         for (BlockRenderLayer renderLayer : BlockRenderLayer.values()) {
-            renderLayerMap.put(renderLayer.toString(), renderLayer);
+            renderLayerMap.put(renderLayer.toString().toLowerCase(), renderLayer);
         }
     }
 

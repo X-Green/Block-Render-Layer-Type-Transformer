@@ -15,13 +15,9 @@ import net.minecraft.util.registry.IRegistry;
 
 public class ReloadTranslucentBlockListListener implements IResourceManagerReloadListener {
 
-    public ReloadTranslucentBlockListListener() {
-        ((IReloadableResourceManager) Minecraft.getInstance().getResourceManager()).addReloadListener(this);
-    }
-
     @Override
     public void onResourceManagerReload(IResourceManager manager) {
-        updateCustomBlockRenderLayers();
+        this.updateCustomBlockRenderLayers();
     }
 
     private void updateCustomBlockRenderLayers() {
@@ -34,7 +30,7 @@ public class ReloadTranslucentBlockListListener implements IResourceManagerReloa
             if (!I18n.hasKey(key)) {
                 continue;
             }
-            renderLayerName = I18n.format(key);
+            renderLayerName = I18n.format(key).toLowerCase();
             if (!RenderLayerData.containRenderLayerNameString(renderLayerName)) {
                 continue;
             }
@@ -54,7 +50,7 @@ public class ReloadTranslucentBlockListListener implements IResourceManagerReloa
             if (!I18n.hasKey(key)) {
                 continue;
             }
-            renderLayerName = I18n.format(key);
+            renderLayerName = I18n.format(key).toLowerCase();
             if (!RenderLayerData.containRenderLayerNameString(renderLayerName)) {
                 continue;
             }

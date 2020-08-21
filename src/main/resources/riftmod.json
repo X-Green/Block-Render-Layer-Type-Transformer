@@ -1,9 +1,10 @@
 {
-    "id": "render-layer-transformer",
+    "id": "render_layer_transformer",
     "name": "Render layer Transformer",
     "authors": [
         "eeasee"
     ],
     "listeners": [
+        "dev.eeasee.render_layer_transformer.listener.ModInitializationListener"
     ]
 }
