@@ -4,7 +4,7 @@
   "compatibilityLevel": "JAVA_8",
   "target": "@env(DEFAULT)",
   "package": "dev.eeasee.render_layer_transformer.mixin",
-  "refmap": "mixins.example.refmap.json",
+  "refmap": "mixins.render_layer_transformer.refmap.json",
   "mixins": [
   ],
   "client": [

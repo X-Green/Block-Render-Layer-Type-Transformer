@@ -19,7 +19,7 @@ apply plugin: 'org.spongepowered.mixin'
 apply plugin: 'java'
 
 group 'dev.eeasee.render-layer-transformer'
-version '1.0.0'
+version '1.13.2-1.0.0'
 archivesBaseName = 'render-layer-transformer'
 
 sourceCompatibility = 1.8
@@ -44,7 +44,7 @@ dependencies {
 
 mixin {
     defaultObfuscationEnv notch
-    add sourceSets.main, 'mixins.' + '' + '.refmap.json'
+    add sourceSets.main, 'mixins.render_layer_transformer.refmap.json'
 }
 
 minecraft {
