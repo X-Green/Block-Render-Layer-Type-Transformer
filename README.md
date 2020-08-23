@@ -38,4 +38,4 @@ https://github.com/X-Green/Minecraft-Clear-Lava-Texture
 
 for block and fluid IDs, see [BlockIDs](docs/BlockIDs.txt)
 
-for render types, see [RenderLayerTypes]()
+for render types, see [RenderLayerTypes](dosc/RenderLayerTypes.txt)
