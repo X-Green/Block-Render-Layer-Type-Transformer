@@ -7,8 +7,7 @@
   ],
   "client": [
     "MinecraftClientMixin",
-    "RenderLayerMixin",
-    "RenderLayersMixin"
+    "ChunkRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

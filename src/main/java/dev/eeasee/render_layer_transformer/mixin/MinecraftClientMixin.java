@@ -11,8 +11,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(MinecraftClient.class)
 public abstract class MinecraftClientMixin {
-    @Inject(method = "<init>", at = @At("RETURN"))
-    private void onClientInitDone(RunArgs args, CallbackInfo ci) {
+    @Inject(method = "init", at = @At("RETURN"))
+    private void onClientInitDone(CallbackInfo ci) {
         BlockRenderLayerTransformer.reloadListener = new ReloadTranslucentBlockListListener();
     }
 }
