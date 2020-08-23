@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "render-layer-trans",
+  "version": "${version}",
+
+  "name": "Render Layer Transformer",
+  "description": "orz",
+  "authors": [
+    "eeasee"
+  ],
+  "contact": {
+    "sources": "https://github.com/X-Green/Transparent-Lava"
+  },
+
+  "license": "CC0-1.0",
+
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+    ]
+  },
+  "mixins": [
+    "render_layer_transformer.mixins.json"
+  ],
+
+  "depends": {
+  }
+}

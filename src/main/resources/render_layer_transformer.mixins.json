@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.eeasee.render_layer_transformer.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+  ],
+  "client": [
+    "MinecraftClientMixin",
+    "RenderLayerMixin",
+    "RenderLayersMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
