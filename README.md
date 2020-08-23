@@ -30,6 +30,8 @@ by adding
 
 and use lava textures with transparency, you can get a clear lava lake.
 
+https://github.com/X-Green/Minecraft-Clear-Lava-Texture
+
 
 
 ## Keys for reference
