@@ -1,7 +1,7 @@
 package dev.eeasee.render_layer_transformer.mixin;
 
 import dev.eeasee.render_layer_transformer.BlockRenderLayerTransformer;
-import dev.eeasee.render_layer_transformer.listener.ReloadTranslucentBlockListListener;
+import dev.eeasee.render_layer_transformer.data.listener.ReloadTranslucentBlockListListener;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.RunArgs;
 import org.spongepowered.asm.mixin.Mixin;

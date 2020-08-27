@@ -6,6 +6,8 @@
   "mixins": [
   ],
   "client": [
+    "AbstractBlock$AbstractBlockStateMixin",
+    "BlockMixin",
     "MinecraftClientMixin",
     "RenderLayerMixin",
     "RenderLayersMixin"
